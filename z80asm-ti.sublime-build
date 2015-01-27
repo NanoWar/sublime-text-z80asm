@@ -11,9 +11,10 @@
     },
     "linux":
     {
-        "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/funk.sh","$file_name","$project_path"]
+        "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/funk.sh","$file_name","$project_path"],
+                "shell": true
     },
-    
+
     "variants":
     [
         {
@@ -25,7 +26,8 @@
             },
             "linux":
             {
-                "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/funk-app.sh","$file_name","$project_path"]
+                "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/funk-app.sh","$file_name","$project_path"],
+                "shell": true
             }
         },
         {
@@ -37,7 +39,8 @@
             },
             "linux":
             {
-                "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/spasm.sh","$file_name","$project_path"]
+                "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/spasm.sh","$file_name","$project_path"],
+                "shell": true
             }
         },
         {
@@ -49,7 +52,8 @@
             },
             "linux":
             {
-                "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/spasm-app.sh","$file_name","$project_path"]
+                "cmd": ["bash", "$packages/z80asm-ti/scripts/linux/spasm-app.sh","$file_name","$project_path"],
+                "shell": true
             }
         }
     ]
