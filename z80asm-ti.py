@@ -128,15 +128,25 @@ class Z80EmulateCommand(sublime_plugin.WindowCommand):
 		project_dir = os.path.abspath(os.path.dirname(self.window.project_file_name()))
 		wabbitemu = project_dir + "/wabbitemu.exe"
 
-		program = None
-		for entry in os.listdir(project_dir):
-			if entry.endswith(".8xk") or entry.endswith(".8xp"):
-				program = entry
-				dbgprint("Found program " + entry)
-
-		if program and os.path.isfile(wabbitemu):
+		if os.path.isfile(wabbitemu):
 			dbgprint("Found wabbitemu in project dir")
-			process = subprocess.Popen([wabbitemu, "-F", project_dir + "/" + program])
+
+			program = None
+			labels = None
+			for entry in os.listdir(project_dir):
+				entry_path = project_dir + "/" + entry
+				if entry.endswith(".8xk") or entry.endswith(".8xp"):
+					dbgprint("Found program " + entry_path)
+					program = entry_path
+				if entry.endswith(".lab"):
+					dbgprint("Found label file " + entry_path)
+					labels = entry_path
+
+			params = [wabbitemu, "-F"]
+			if program:
+				params.append(program)
+			if labels:
+				params.append(labels)
 
 			# if wabbitemu_process and wabbitemu_process.poll() == None:
 			# 	dbgprint("Using existing emulator")
@@ -148,7 +158,9 @@ class Z80EmulateCommand(sublime_plugin.WindowCommand):
 			if wabbitemu_process:
 				dbgprint("Killing existing emulator")
 				wabbitemu_process.kill()
+
 			dbgprint("Starting new emulator")
+			process = subprocess.Popen(params)
 			wabbitemu_process = process
 
 # Autocompletion class

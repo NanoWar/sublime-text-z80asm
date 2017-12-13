@@ -4,6 +4,8 @@
 <dict>
 	<key>name</key>
 		<string>Monokai-z80asmti</string>
+	<key>uuid</key>
+		<string>f705bd85-c431-4288-85b2-814630c029e9</string>
 	<key>settings</key>
 	<array>
 		<dict>
@@ -636,8 +638,35 @@
 					<string>#E6DB74</string>
 			</dict>
 		</dict>
+		<!--
+			Console colors
+		-->
+		<dict>
+			<key>Name</key>
+				<string>Console color yellow</string>
+			<key>scope</key>
+				<string>yellow.z80-console</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+					<string></string>
+				<key>foreground</key>
+					<string>#F6E54F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Name</key>
+				<string>Console color green</string>
+			<key>scope</key>
+				<string>green.z80-console</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+					<string></string>
+				<key>foreground</key>
+					<string>#88DC33</string>
+			</dict>
+		</dict>
 	</array>
-	<key>uuid</key>
-		<string>f705bd85-c431-4288-85b2-814630c029e9</string>
 </dict>
 </plist>

@@ -317,15 +317,7 @@
 			<key>comment</key>
 				<string>Getkey (sk, di) constants</string>
 			<key>match</key>
-				<string>(?i)\b((sk|di)[^;\s\.]+)\b</string>
-			<key>name</key>
-				<string>constant.z80</string>
-		</dict>
-		<dict>
-			<key>comment</key>
-				<string>Boolean constant</string>
-			<key>match</key>
-				<string>(?i)\b(true|false)\b</string>
+				<string>\b((sk|di)[^;\s\.]+)\b</string>
 			<key>name</key>
 				<string>constant.z80</string>
 		</dict>

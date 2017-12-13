@@ -11,8 +11,15 @@ This plugin contains syntax definition for Z80 assembler language (targeting Tex
 
 ## Installation
 
-Simply copy the `sublime-text-z80asm-ti` directory to the Sublime Text `Packages` directory. Under Windows that would be in you User folder `...\AppData\Roaming\Sublime Text 3\Packages\`.
+Simply copy the `z80asm-ti` directory to the Sublime Text `Packages` directory. Under Windows that would be in you User folder `...\AppData\Roaming\Sublime Text 3\Packages\`.
 Go to the `Tools > Build System` menu and select the `z80asm-ti` item. Now you can press Ctrl+B to build the opened file or the project if there is a FunkLibrary config file (see FunkLibrary's readme).
+
+You need to check out the spasm-funk (https://github.com/NanoWar/spasm-funk) submodule by typing:
+When you already pulled the sublime-funk repository:
+* git submodule update --init
+
+Or you initially clone sublime-funk recursively with:
+* git clone --recursive https://github.com/NanoWar/sublime-funk.git
 
 ---
 

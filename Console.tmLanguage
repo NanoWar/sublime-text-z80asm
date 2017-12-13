@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+		<string>z80Asm-ti-console</string>
+	<key>scopeName</key>
+		<string>source.console</string>
+	<key>uuid</key>
+		<string>d290e344-a5f2-11e4-89d3-123b93f75cba</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>\e\[1;33</string>
+
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>hide</string>
+				</dict>
+			</dict>
+
+			<key>end</key>
+			<string>\e\[0m</string>
+
+			<key>name</key>
+			<string>yellow.z80-console</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+				<string>Here label</string>
+			<key>match</key>
+				<string>Success</string>
+			<key>name</key>
+				<string>green.z80-console</string>
+		</dict>
+	</array>
+</dict>
+</plist>
