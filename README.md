@@ -15,11 +15,11 @@ Simply copy the `z80asm-ti` directory to the Sublime Text `Packages` directory. 
 Go to the `Tools > Build System` menu and select the `z80asm-ti` item. Now you can press Ctrl+B to build the opened file or the project if there is a FunkLibrary config file (see FunkLibrary's readme).
 
 You need to check out the spasm-funk (https://github.com/NanoWar/spasm-funk) submodule by typing:
-When you already pulled the sublime-funk repository:
+When you already pulled the z80asm-ti repository:
 * git submodule update --init
 
-Or you initially clone sublime-funk recursively with:
-* git clone --recursive https://github.com/NanoWar/sublime-funk.git
+Or you initially clone z80asm-ti recursively with:
+* git clone --recursive https://github.com/NanoWar/z80asm-ti.git
 
 ---
 
